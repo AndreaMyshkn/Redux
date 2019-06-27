@@ -1,4 +1,4 @@
-// Retorna una función con una action
+// Reducer que recibe el estado inicial, una acción, y que retorna un nuevo estado.
 export default function (state = {}, action) {
   switch (action.type) {
     case 'GET_ARTISTS':
@@ -9,6 +9,8 @@ export default function (state = {}, action) {
       return { ...state, artistData: action.payload }
     case 'CLEAR_ARTIST_DETAIL':
       return { ...state, artistData: action.payload }
+      //si no existe action.type o no concuerda con ningún caso definido
+    // se devuelve el estado sin modificar
     default:
       return state
   }

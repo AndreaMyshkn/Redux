@@ -10,6 +10,7 @@ import reducers from './reducers'
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware)(createStore)
 
 ReactDOM.render(
+// El provider recibe la store como prop,misma que proporciona a sus componentes secundarios
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <Routes />

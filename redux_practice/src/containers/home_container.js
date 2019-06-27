@@ -35,7 +35,7 @@ console.log(state)
   }
 
 }
-
+//Envía el estado al store
 function mapDispatchToProps(dispatch){
  return bindActionCreators({artistListAll, artistList}, dispatch)
 }

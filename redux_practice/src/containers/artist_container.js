@@ -60,13 +60,13 @@ class ArtistContainer extends Component {
         );
     }
 }
-
+//Provee el estado de la store
 function mapStateToProps (state) {
     return {
         artists:state.artists
     }
 }
-
+//envía el estado de la store. 'bindActionCreators' conecta los creadores de acciones
 function mapDispatchToProps (dispatch)  {
     return bindActionCreators({artistsDetail, clearArtistsDetail}, dispatch)
 }

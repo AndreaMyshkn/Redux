@@ -1,11 +1,12 @@
 import axios from 'axios'
 const URL = 'http://localhost:3004'
-
+// Creadores de ACCIONES : Envían datos desde la aplicación hacia el store
 export function artistList (keywords) {
   const request = axios.get(`${URL}/artists?q=${keywords}`)
     .then(response => response.data)
-
+// formato de la acción definido por el flux standard
   return {
+  //Tipo de acción a realizar
     type: 'GET_ARTISTS',
     payload: request
   }
